@@ -8,7 +8,6 @@ import DisplayCaseDetails from './components/Cases/caseDetails';
 import LawyerProfile from './components/Lawyers/lawyerProfile';
 import ListLawyers from './components/Lawyers/listLawyers';
 import Profile from './components/Users/userProfile';
-import Developers from './components/Developers/developers';
 import UserAuth from './components/userAuth';
 import Dashboard from './components/Pages/Dashboard';
 import LawyerDetails from './components/Lawyers/lawyerDetails';
@@ -56,10 +55,6 @@ function App() {
         <Route
           exact path="/auth"
           element={<UserAuth/>}
-          />
-        <Route
-          exact path="/developers"
-          element={<Developers/>}
           />
         <Route
           exact path="/dashboard"
