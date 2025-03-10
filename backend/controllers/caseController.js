@@ -37,7 +37,7 @@ module.exports.newCase = async (req, res) => {
         let newCase = {
             defendant: req.body.defendant,
             plaintiff: req.body.plaintiff,
-            plaintiffLawyer: "Paras Churi",
+            plaintiffLawyer: "Atharva Waghmare",
             defendantLawyer: req.body.defendantLawyer,
             judge: req.body.judge,
             caseType: req.body.caseType,

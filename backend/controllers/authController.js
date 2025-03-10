@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 
 module.exports.newUser = async (req, res) => {
     try {
+        console.log(req.body.emailId)
         let newUser = {
             userName: req.body.userName,
             password: req.body.password,

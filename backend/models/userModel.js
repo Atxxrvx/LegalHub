@@ -11,6 +11,7 @@ const UserSchema = new mongoose.Schema({
         required: true
     },
     emailId: {
+        unique: true,
         type: String,
         required: true
     },
@@ -38,6 +39,6 @@ UserSchema.pre("save", async function () {
     this.password = await bcrypt.hash(this.password, 12);
 });
 
-const UserCollection = mongoose.model('user', UserSchema)
+const UserCollection = mongoose.model('user1', UserSchema)
 
 module.exports = UserCollection

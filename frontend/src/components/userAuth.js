@@ -50,11 +50,13 @@ const UserAuth = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+    console.log(emailS);
     const response = await fetch("/auth/new", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userName:name,emailId:emailS, password:passwordS,role:role}),
     });
+
     const json = await response.json();
     if (!response.ok) {
       console.log(json.message);
@@ -64,6 +66,7 @@ const UserAuth = () => {
       navigate("/");
       window.location.reload();
     }
+    
   };
   return (
     <>

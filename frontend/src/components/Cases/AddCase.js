@@ -7,7 +7,7 @@ function AddCase(props) {
   const [optionlawyers, setOptionlawyers] = useState([])
   const [casetype, setCasetype] = useState("Criminal")
   const [casedescrip, setCasedescrip] = useState("")
-  const [lawyer, setLawyer] = useState("Warren Jacinto")
+  const [lawyer, setLawyer] = useState("Arnav Phad")
   const [defendant, setDefendent] = useState("")
 
   const getLawyers = async () => {
@@ -46,7 +46,7 @@ function AddCase(props) {
         body: JSON.stringify({
           defendant: defendant,
           plaintiff: JSON.parse(localStorage.getItem("name")),
-          judge: "Naman Gosain",
+          judge: "Shrikar Dongre",
           defendantLawyer: lawyer,
           caseType: casetype,
           description: casedescrip
@@ -75,7 +75,7 @@ function AddCase(props) {
     setCasetype("Criminal")
     setDefendent("")
     setCasedescrip("")
-    setLawyer("Warren Jacinto")
+    setLawyer("Arnav Phad")
   }
 
   useEffect(() => {
